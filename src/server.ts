@@ -11,6 +11,5 @@ const api = express();
 api.use(express.json());
 api.use(router);
 
-
 const PORT = 3000;
 api.listen(PORT, () => console.log(`Server Up: ${PORT}`));
