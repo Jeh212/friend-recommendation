@@ -1,14 +1,15 @@
 {
-  "name": "node-typescript-boilerplate",
-  "version": "0.0.0",
-  "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
-  "type": "module",
-  "engines": {
-    "node": ">= 16.13 <17"
-  },
+  "name": "friend-recommendation",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "repository": "git@github.com:Jeh212/friend-recommendation.git",
+  "author": "Jean carlos <jeandub1@hotmail.com>",
+  "license": "MIT",
   "devDependencies": {
+    "@types/express": "^4.17.14",
     "@types/jest": "~27.5",
     "@types/node": "~16",
+    "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "~5.26",
     "@typescript-eslint/parser": "~5.26",
     "eslint": "~8.16",
@@ -18,27 +19,23 @@
     "prettier": "~2.6",
     "rimraf": "~3.0",
     "ts-jest": "~28.0",
+    "ts-node-dev": "^2.0.0",
     "tsutils": "~3.21",
     "typescript": "~4.7"
   },
   "scripts": {
-    "start": "node build/src/main.js",
-    "clean": "rimraf coverage build tmp",
-    "prebuild": "npm run lint",
+    "start": "pm2 start build/src/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only  --clear --exit-child --ignore-watch node_modules src/server.ts",
     "build": "tsc -p tsconfig.json",
-    "build:watch": "tsc -w -p tsconfig.json",
-    "build:release": "npm run clean && tsc -p tsconfig.release.json",
-    "lint": "eslint . --ext .ts --ext .mts",
-    "test": "jest --coverage",
-    "prettier": "prettier --config .prettierrc --write .",
-    "test:watch": "jest --watch"
+    "test": "jest  --no-cache --watchAll"
   },
-  "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
-  "license": "Apache-2.0",
   "dependencies": {
-    "tslib": "~2.4"
-  },
-  "volta": {
-    "node": "16.13.0"
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "~2.4",
+    "tsyringe": "^4.7.0",
+    "uuid": "^9.0.0"
   }
 }
