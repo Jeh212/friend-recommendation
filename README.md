@@ -36,6 +36,6 @@ $ docker-compose up
 
     http://18.231.163.196:3000/person
     http://18.231.163.196:3000/person/:CPF
-    http://18.231.163.196/relationship
-    http://18.231.163.196/recommendations/89230878154
-    http://18.231.163.196/clean
+    http://18.231.163.196:3000/relationship
+    http://18.231.163.196:3000/recommendations/89230878154
+    http://18.231.163.196:3000/clean
