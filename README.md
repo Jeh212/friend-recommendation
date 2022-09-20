@@ -27,9 +27,9 @@ $ docker-compose up
 
     # http://localhost:3000/person
     # http://localhost:3000/person/:CPF
-    # http://localhost/relationship
-    # http://localhost/recommendations/89230878154
-    # http://localhost/clean
+    # http://localhost:3000/relationship
+    # http://localhost:3000/recommendations/89230878154
+    # http://localhost:3000/clean
 ```
 
 # Para testar na AWS usar o seguinte IP para acesso direto a aplicação:
