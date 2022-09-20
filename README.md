@@ -24,6 +24,12 @@ $ cd friend-recommendation
 $ docker-compose up
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+
+    # http://localhost:3000/person
+    # http://localhost:3000/person/:CPF
+    # http://localhost/relationship
+    # http://localhost/recommendations/89230878154
+    # http://localhost/clean
 ```
 
 # Para testar na AWS usar o seguinte IP para acesso direto a aplicação:
