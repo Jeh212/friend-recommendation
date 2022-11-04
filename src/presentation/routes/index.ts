@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { Router, Request, Response } from 'express';
+import { Request, Response, Router } from 'express';
 import { PersonController } from '../controllers/PersonController';
 import { RecommendationController } from '../controllers/RecommendationController';
 import { RelationShipController } from '../controllers/RelationShipController';

@@ -1,6 +1,6 @@
+import { v4 as uuid } from 'uuid';
 import { IRelationShip } from '../entities/IRelationShip';
 import { IRelationShipRepository } from './protocols/IRelationShipRepository';
-import { v4 as uuid } from 'uuid';
 
 class RelationShipRepository implements IRelationShipRepository {
   private readonly relationShipRepo: Array<IRelationShip> = [];
@@ -17,9 +17,11 @@ class RelationShipRepository implements IRelationShipRepository {
 
     this.relationShipRepo.push(relationData);
 
-    const relation = this.relationShipRepo[0];
+    const relation = this.relationShipRepo;
 
-    return relation;
+    const lastItemInArray = relation[relation.length - 1];
+
+    return lastItemInArray;
   }
 
   async listMyRelations(cpf: string): Promise<string[] | []> {

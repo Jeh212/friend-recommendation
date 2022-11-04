@@ -1,6 +1,6 @@
+import { v4 as uuid } from 'uuid';
 import { IPerson } from '../entities/IPerson.js';
 import { IPersonRepository } from './protocols/IPersonRepository.js';
-import { v4 as uuid } from 'uuid';
 
 class PersonRepository implements IPersonRepository {
   private readonly personMemoRepo: Array<IPerson> = [];
@@ -20,9 +20,11 @@ class PersonRepository implements IPersonRepository {
 
     this.personMemoRepo.push(personData);
 
-    const person = this.personMemoRepo[0];
+    const personArray = this.personMemoRepo;
 
-    return person;
+    const lastItemInArray = personArray[personArray.length - 1];
+
+    return lastItemInArray;
   }
 
   async retrivePerson(cpf: string): Promise<IPerson> {
