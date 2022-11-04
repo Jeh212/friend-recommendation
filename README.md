@@ -34,8 +34,8 @@ $ docker-compose up
 
 # Para testar na AWS usar o seguinte IP para acesso direto a aplicação:
 
-    http://18.231.163.196:3000/person
-    http://18.231.163.196:3000/person/:CPF
-    http://18.231.163.196:3000/relationship
-    http://18.231.163.196:3000/recommendations/89230878154
-    http://18.231.163.196:3000/clean
+    http://15.228.154.36:3000/person
+    http://15.228.154.36:3000/person/:CPF
+    http://15.228.154.36:3000/relationship
+    http://15.228.154.36:3000/recommendations/89230878154
+    http://15.228.154.36:3000/clean
